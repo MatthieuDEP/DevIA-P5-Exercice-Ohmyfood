@@ -67,3 +67,9 @@
 .liked {
   color: #9356dc;
 }
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
