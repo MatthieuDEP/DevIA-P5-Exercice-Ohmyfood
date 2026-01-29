@@ -56,9 +56,14 @@
 
 .heartIcon {
   color: #000;
-  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
 .heartButton:hover .heartIcon {
   transform: scale(1.1);
+}
+
+.liked {
+  color: #9356dc;
 }
