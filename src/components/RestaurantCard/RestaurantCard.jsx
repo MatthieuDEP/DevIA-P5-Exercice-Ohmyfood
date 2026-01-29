@@ -1,22 +1,23 @@
 import styles from "./RestaurantCard.module.css";
 
+export default function RestaurantCard({ restaurant }) {
+  const {name, location, image, isNew} = restaurant;
 
-export default function RestaurantCard() {
   return (
     <article className={styles.card}>
       <div className={styles.imageWrapper}>
         <img
-          src="./images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-          alt="La palette du goût"
+          src={image}
+          alt={name}
           className={styles.image}
         />
-        <span className={styles.badge}>Nouveau</span>
+        {isNew && <span className={styles.badge}>Nouveau</span>}
       </div>
 
       <div className={styles.content}>
         <div>
-          <h3 className={styles.title}>La palette du goût</h3>
-          <p className={styles.location}>Ménilmontant</p>
+          <h3 className={styles.title}>{name}</h3>
+          <p className={styles.location}>{location}</p>
         </div>
 
         <button className={styles.heartButton} aria-label="Ajouter aux favoris">
