@@ -31,7 +31,7 @@ export default function Home() {
           <h2>Restaurants</h2>
           <div className={styles.restaurantGrid}>
             {restaurants.map((restaurant) => (
-              <RestaurantCard key={restaurants.id} restaurant={restaurant}/>
+              <RestaurantCard key={restaurant.id} restaurant={restaurant}/>
             ))}
           </div>
         </div>

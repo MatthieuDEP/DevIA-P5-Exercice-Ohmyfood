@@ -2,6 +2,7 @@ import restaurantsData from "@/data/restaurants.json";
 import Image from "next/image";
 import MenuItem from "@/components/MenuItem/MenuItem";
 import FavoriteHeart from "@/components/FavoriteHeart/FavoriteHeart";
+import { notFound } from "next/navigation";
 
 
 export default async function RestaurantPage({ params }) {
@@ -12,7 +13,7 @@ export default async function RestaurantPage({ params }) {
   );
 
   if (!restaurant) {
-    return null;
+    notFound();
   }
 
   return (
